@@ -1,9 +1,9 @@
-const { getPool } = require('../config/db');
+const { getPool } = require('../../config/db');
 
 class UserModel {
   static async createUser(name, email, password) {
     const query = 'INSERT INTO users (name, email, password) VALUES (?, ?, ?)';
-    const pool = getPool(); // Obtenemos el pool
+    const pool = getPool();
     const [result] = await pool.query(query, [name, email, password]);
     return { id: result.insertId, name, email, password };
   }
