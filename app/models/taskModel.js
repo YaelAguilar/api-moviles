@@ -3,7 +3,7 @@ const { getPool } = require('../../config/db');
 class TaskModel {
   /**
    * Crea una nueva tarea
-   * @param {string} userEmail - email del usuario
+   * @param {string} userEmail
    * @param {string} title
    * @param {string} content
    * @returns {Object}
